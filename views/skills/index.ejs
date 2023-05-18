@@ -3,8 +3,8 @@
 <h1><%= title %></h1>
 <ul id="skills">
     <% skills.forEach(function(skill) { %>
-        <li>
-            <a href="/skills/<%= skill %>">
+        <li class="skill">
+            <a href="/skills/<%= skill.replace(/#/g, '%23') %>">
                 <%= skill %>
             </a>
         </li>
