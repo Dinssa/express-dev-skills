@@ -41,20 +41,20 @@ nav > ul {
   padding-left: 3px;
 }
 
-li > img {
+#team > li > img {
   width: 30px;
   height: 30px;
   border-radius: 20%;
   margin-right: 10px;
 }
 
-li {
+#team > li {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
 }
 
-li > a {
+#team > li > a {
   text-decoration: none;
 }
 
@@ -64,7 +64,7 @@ li > a {
   align-items: center;
   background-color: #dad2bc;
   padding: 10px;
-  max-width: 20vmin;
+  max-width: 20vw;
 }
 
 .profile > img {
@@ -93,4 +93,35 @@ li > a {
 .skills > h3 {
   letter-spacing: 4px;
   text-transform: uppercase;
+}
+
+#skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#skills > li {
+  padding: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#skills > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70%;
+  background-color: #bca180;
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+#skills > li > a:hover {
+  background-color: #a99985;
 }
