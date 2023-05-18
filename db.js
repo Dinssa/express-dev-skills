@@ -24,6 +24,7 @@ const skills = [
 
 for (let i = 0; i < 10; i++) {
     team.push({
+        id: `00${i}`,
         firstname: faker.person.firstName(),
         lastname: faker.person.lastName(),
         gender: faker.person.gender(),
