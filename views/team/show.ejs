@@ -1,29 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>Our Team</title>
-</head>
-<body>
-    <nav>
-        <ul>
-          <li><a href="/team">Back</a></li>
-        </ul>
-      </nav>
-
-        <h1>Team Member</h1>
-
-        <img src="<%= person.avater %>" alt="">
-        <h2><%= person.firstname %> <%= person.lastname %></h2>
-        <p><%= person.bio %></p>
-        <br>
-        <h3>Top Skills:</h3>
-        <p><%= person.skills %></p>
-        <br>
-        <p><%= person.email %></p>
-        <p><%= person.phone %></p>
-</body>
-</html>
+<%- include('../partials/header', {title: title}) %>
+<%- include('../partials/navbar', {backLink: backLink}) %>
+<h1><%= title %></h1>
+<img src="<%= person.avater %>" alt="">
+<h2><%= person.firstname %> <%= person.lastname %></h2>
+<p><%= person.bio %></p>
+<br>
+<h3>Top Skills:</h3>
+<p><%= person.skills %></p>
+<br>
+<p><%= person.email %></p>
+<p><%= person.phone %></p>
+<%- include('../partials/footer') %>
