@@ -1,8 +1,96 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f5f1ed;
 }
 
 a {
-  color: #00B7FF;
+  color: #70798c;
+}
+
+a:hover{
+  color: #a99985;
+}
+
+.button {
+  background-color: #a99985;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #dad2bc;
+}
+
+nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#team{
+  list-style-type: none;
+  margin: 0;
+  padding-left: 3px;
+}
+
+li > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 20%;
+  margin-right: 10px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+li > a {
+  text-decoration: none;
+}
+
+.profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #dad2bc;
+  padding: 10px;
+  max-width: 20vmin;
+}
+
+.profile > img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: #70798c 5px solid;
+}
+
+.profile > a {
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #252323;
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+
+.skills > h3 {
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }

@@ -1,13 +1,17 @@
 <%- include('../partials/header', {title: title}) %>
 <%- include('../partials/navbar', {backLink: backLink}) %>
 <h1><%= title %></h1>
-<img src="<%= person.avater %>" alt="">
-<h2><%= person.firstname %> <%= person.lastname %></h2>
-<p><%= person.bio %></p>
-<br>
-<h3>Top Skills:</h3>
-<p><%= person.skills %></p>
-<br>
-<p><%= person.email %></p>
-<p><%= person.phone %></p>
+<div class="profile">
+    <img src="<%= person.avatar %>" alt="">
+    <h2><%= person.firstname %> <%= person.lastname %></h2>
+    <p><%= person.bio %></p>
+    <br>
+    <div class="skills">
+        <h3>Top Skills</h3>
+        <p><%= person.skills %></p>
+    </div>
+    <br>
+    <a href="mailto:<%= person.email %>"><%= person.email %></a>
+    <a href="tel:<%= person.phone %>"><%= person.phone %></a>
+</div>
 <%- include('../partials/footer') %>

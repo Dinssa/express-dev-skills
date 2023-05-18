@@ -1,9 +1,10 @@
 <%- include('../partials/header', {title: title}) %>
 <%- include('../partials/navbar', {backLink: backLink}) %>
 <h1><%= title %></h1>
-<ul>
+<ul id="team">
     <% team.forEach(function(person) { %>
         <li>
+            <img src="<%= person.avatar %>" alt="">
             <a href="/team/<%= person.id %>">
                 <%= person.firstname %>
                 <%= person.lastname %>

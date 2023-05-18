@@ -29,7 +29,7 @@ for (let i = 0; i < 10; i++) {
         lastname: faker.person.lastName(),
         bio: faker.person.bio(),
         phone: faker.phone.number('+44 7# ## ## ## ##'),
-        avater: faker.image.avatarLegacy(),
+        avatar: faker.image.avatarLegacy(),
         skills: randomSkills()
     });
     team[i].email = `${team[i].firstname.toLowerCase()}.${team[i].lastname.toLowerCase()}@company.com`;
