@@ -1,11 +1,11 @@
 const database = require('../db');
 
 function getAll(){
-    return database;
+    return database.team;
 }
 
 function getOne(id){
-    return database.find(person => person.id === parseInt(id));
+    return database.team.find(person => person.id === parseInt(id));
 }
 
 module.exports = {

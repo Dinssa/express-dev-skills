@@ -51,4 +51,7 @@ function randomSkill(){
     return skills[random];
 }
 
-module.exports = team;
+module.exports = {
+    team,
+    skills
+}
