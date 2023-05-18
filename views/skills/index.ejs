@@ -1,0 +1,12 @@
+<%- include('../partials/header', {title: title}) %>
+<%- include('../partials/navbar', {backLink: backLink}) %>
+<h1><%= title %></h1>
+<ul id="skills">
+    <% skills.forEach(function(skill) { %>
+        <li>
+            <a href="/skills/<%= skill %>">
+                <%= skill %>
+            </a>
+        </li>
+    <% }); %>
+<%- include('../partials/footer') %>
