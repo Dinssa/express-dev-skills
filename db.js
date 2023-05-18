@@ -27,17 +27,23 @@ for (let i = 0; i < 10; i++) {
         id: 1000 + i,
         firstname: faker.person.firstName(),
         lastname: faker.person.lastName(),
-        gender: faker.person.gender(),
-        email: faker.internet.email(),
         bio: faker.person.bio(),
         phone: faker.phone.number('+44 7# ## ## ## ##'),
         avater: faker.image.avatarLegacy(),
         skills: randomSkills()
     });
+    team[i].email = `${team[i].firstname.toLowerCase()}.${team[i].lastname.toLowerCase()}@company.com`;
 }
 
 function randomSkills(){
-    return `${randomSkill()}, ${randomSkill()}, ${randomSkill()}`;
+    let skills = [];
+    while (skills.length < 3) {
+        const skill = randomSkill();
+        if (!skills.includes(skill)) {
+            skills.push(skill);
+        }
+    }
+    return skills.join(', ');
 }
 
 function randomSkill(){
