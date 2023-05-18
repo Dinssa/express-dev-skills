@@ -5,7 +5,7 @@ function getAll(){
 }
 
 function getOne(id){
-    return database[id];
+    return database.find(person => person.id === parseInt(id));
 }
 
 module.exports = {
