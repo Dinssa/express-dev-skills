@@ -8,7 +8,12 @@ function getOne(selected){
     return database.skills.find(skill => skill === selected)
 }
 
+function createOne(newSkill){
+    database.skills.push(newSkill);
+}
+
 module.exports = {
     getAll,
-    getOne
+    getOne,
+    createOne
 }
