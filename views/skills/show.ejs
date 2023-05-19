@@ -6,7 +6,7 @@
 </div>
 <a href="/skills/<%= skill %>/edit" class="button">Edit</a>
 
-<form action="/skills/<%= skill %>?_method=DELETE" method="POST" class="delete">
+<form action="/skills/<%= skill.replace(/#/g, '%23')%>?_method=DELETE" method="POST" class="delete">
     <button class="button">Delete</a>
 </form>
 <%- include('../partials/footer') %>
