@@ -12,8 +12,13 @@ function createOne(newSkill){
     database.skills.push(newSkill);
 }
 
+function updateOne(selected, updatedSkill){
+    database.skills[database.skills.indexOf(selected)] = updatedSkill;
+}
+    
 module.exports = {
     getAll,
     getOne,
-    createOne
+    createOne,
+    updateOne
 }

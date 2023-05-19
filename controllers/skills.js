@@ -1,4 +1,4 @@
-const { getAll, getOne, createOne } = require('../models/skill');
+const { getAll, getOne, createOne, updateOne } = require('../models/skill');
 
 function index(req, res, next) {
     res.render('skills/index', { title: 'All Skills', skills: getAll(), backLink: '/' });
@@ -17,9 +17,20 @@ function createSkill(req, res, next) {
     res.redirect('/skills');
 }
 
+function editSkill(req, res, next) {
+    res.render('skills/edit', { title: 'Edit Skill', skill: getOne(req.params.selected), backLink: '/skills' });
+}
+
+function updateSkill(req, res, next) {
+    updateOne(req.params.skill, req.body.skill);
+    res.redirect(`/skills/${req.body.skill}`);
+}
+
 module.exports = {
     index,
     show,
     addSkill,
-    createSkill
+    createSkill,
+    editSkill,
+    updateSkill
 }
