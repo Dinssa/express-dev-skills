@@ -15,10 +15,15 @@ function createOne(newSkill){
 function updateOne(selected, updatedSkill){
     database.skills[database.skills.indexOf(selected)] = updatedSkill;
 }
+
+function deleteOne(selected){
+    database.skills.splice(database.skills.indexOf(selected), 1);
+}
     
 module.exports = {
     getAll,
     getOne,
     createOne,
-    updateOne
+    updateOne,
+    deleteOne
 }

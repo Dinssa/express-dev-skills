@@ -1,4 +1,4 @@
-const { getAll, getOne, createOne, updateOne } = require('../models/skill');
+const { getAll, getOne, createOne, updateOne, deleteOne } = require('../models/skill');
 
 function index(req, res, next) {
     res.render('skills/index', { title: 'All Skills', skills: getAll(), backLink: '/' });
@@ -26,11 +26,17 @@ function updateSkill(req, res, next) {
     res.redirect(`/skills/${req.body.skill}`);
 }
 
+function deleteSkill(req, res, next) {
+    deleteOne(req.params.skill);
+    res.redirect('/skills');
+}
+
 module.exports = {
     index,
     show,
     addSkill,
     createSkill,
     editSkill,
-    updateSkill
+    updateSkill,
+    deleteSkill
 }
