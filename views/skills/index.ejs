@@ -3,12 +3,12 @@
 <h1><%= title %></h1>
 <ul id="skills">
     <% skills.forEach(function(skill) { %>
-        <li class="skill">
+        <li>
             <a href="/skills/<%= skill.replace(/#/g, '%23') %>">
                 <%= skill %>
             </a>
         </li>
     <% }); %>
 </ul>
-<a href="/skills/new" class="button">Add Skill</a>
+<a href="/skills/new" class="button" id="addSkillBtn">Add Skill</a>
 <%- include('../partials/footer') %>
